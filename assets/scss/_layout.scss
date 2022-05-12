@@ -1,0 +1,138 @@
+@use "./base" as *;
+
+.ml-5 {
+  margin-left: rem(30);
+}
+
+.container {
+  background-color: #fff;
+  width: min(100%, rem(837));
+  margin-inline: auto;
+  padding: rem(30) rem(95);
+  box-shadow: $box-shadow;
+
+  @include tablet {
+    width: 100%;
+    padding: rem(30);
+  }
+
+  &__header {
+    display: flex;
+    gap: rem(30);
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .person-img img {
+      width: rem(160);
+      height: rem(160);
+      @include tablet {
+        width: rem(140);
+        height: rem(140);
+      }
+    }
+
+    .person-img {
+      @include tablet {
+        align-self: center;
+      }
+    }
+
+    .person-info {
+      align-self: center;
+      .full-name {
+        text-transform: uppercase;
+        font-size: rem(24);
+        font-weight: $fw-600;
+        @include tablet {
+          font-size: rem(20);
+        }
+      }
+      .job-title {
+        font-size: rem(16);
+        opacity: 0.75;
+        @include tablet {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .dot-hr {
+    width: 100%;
+    border: rem(1) dashed rgba(51, 51, 51, 0.445);
+    opacity: 0.3;
+    margin: rem(40) 0;
+  }
+
+  &__main {
+    .block {
+      .card {
+        display: flex;
+        gap: rem(15);
+        @include tablet {
+          gap: rem(10);
+        }
+
+        .icon {
+          width: rem(53);
+          height: rem(53);
+          align-self: center;
+          @include tablet {
+            width: rem(45);
+            height: rem(45);
+          }
+        }
+
+        .icon img {
+          width: rem(53);
+          height: rem(53);
+          @include tablet {
+            width: rem(45);
+            height: rem(45);
+          }
+        }
+
+        .text-description {
+          align-self: center;
+          font-size: rem(20);
+          text-transform: uppercase;
+          font-weight: $fw-600;
+          @include tablet {
+            font-size: rem(18);
+          }
+        }
+      }
+
+      .some-text {
+        margin-top: rem(20);
+        margin-bottom: rem(40);
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__footer {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: rem(15);
+      padding: 0;
+    }
+
+    ul li a img {
+      width: rem(53);
+      height: rem(53);
+      transition: all 0.2s;
+      @include tablet {
+        width: rem(45);
+        height: rem(45);
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

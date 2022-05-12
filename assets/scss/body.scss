@@ -1,0 +1,17 @@
+@use "./index" as *;
+
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: $ff-nunito;
+  padding: rem(20);
+    
+  @include tablet {
+      padding: 0;
+  }
+}
